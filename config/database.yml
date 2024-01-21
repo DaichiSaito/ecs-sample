@@ -50,6 +50,7 @@ test:
 #
 production:
   <<: *default
-  database: ecs_sample_production
-  username: ecs_sample
-  password: <%= ENV["ECS_SAMPLE_DATABASE_PASSWORD"] %>
+  database: fargate_test
+  password: <%= ENV['DB_PASSWORD'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  host: <%= ENV['DB_HOST'] %>
